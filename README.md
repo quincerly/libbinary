@@ -14,12 +14,12 @@ Install dependencies. In Ubuntu 14.04 I needed to add these
 
     sudo apt-get install build-essential freeglut3-dev libtiff5-dev libxmu-dev libxmu6
 
-Set the install location environment variable `LIBBINARY` and add to the library path
+Set the install location environment variable <tt>LIBBINARY</tt> and add to the library path
 
     export LIBBINARY=/usr/local/libbinary
     export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${BINARY}/lib
 
-to your `.bashrc`
+to your <tt>.bashrc</tt>
 
 Compile and install
 
