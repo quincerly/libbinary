@@ -8,6 +8,28 @@ Early imports may be non-functional or have out-of-date docs - this code is from
 
 It should be working when I merge it into master.
 
+# Build and install libbinary
+
+Install dependencies. In Ubuntu 14.04 I needed to add these
+
+    sudo apt-get install build-essential freeglut3-dev libtiff5-dev libxmu-dev libxmu6
+
+Set the install location environment variable `LIBBINARY` and add to the library path
+
+    export LIBBINARY=/usr/local/libbinary
+    export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${BINARY}/lib
+
+to your `.bashrc`
+
+Compile and install
+
+    make
+    sudo -E make install
+
+That should be it. Won't do much until I add something which depends on it.
+
+One of my aims with creating this is to put together a modern CMake makefile and proper build configuration to remove the need for the ancient methods above. But first I will get it working again the old way.
+
 # Original uncorrected documentation
 
 Contents:

@@ -10,8 +10,8 @@ LINK = gcc -shared
 #COMPILE = gcc -c -O3 -fPIC -ev6 -ieee
 #LINK = gcc -shared
 
-INCLUDEDEST = ${BINARY}/include/
-LIBDEST = ${BINARY}/lib/
+INCLUDEDEST = ${LIBBINARY}/include/
+LIBDEST = ${LIBBINARY}/lib/
 LIBNAME = libbinary.so
 MAJOR = .1
 
