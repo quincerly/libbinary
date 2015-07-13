@@ -10,11 +10,11 @@ It should be working when I merge it into master.
 
 # Build and install libbinary
 
-Install dependencies. In Ubuntu 14.04 I needed to add these
+Install dependencies, e.g. In Ubuntu 14.04
 
-    sudo apt-get install build-essential freeglut3-dev libtiff5-dev libxmu-dev libxmu6
+    sudo apt-get install build-essential
 
-Set the install location environment variable <tt>LIBBINARY</tt> and add to the library path
+Set the install location environment variable <tt>LIBBINARY</tt> and add to the library path, e.g.
 
     export LIBBINARY=/usr/local/libbinary
     export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${BINARY}/lib
