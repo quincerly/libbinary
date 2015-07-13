@@ -1,0 +1,28 @@
+# Define compiler
+COMPILE = gcc -c
+
+# Define linker
+LINK = gcc
+
+# Define include and library directories
+INCLUDEDIR = -I/usr/include -I/usr/local/include
+LIBDIR = -L/usr/local/lib -L/usr/lib -L/usr/X11R6/lib
+
+# Define libraries to use for linking
+LIBS = -lf2c -lpgplot -lX11 -lm -lreadline -lcpgplot 
+
+stream: stream.o binary.o misc.o
+	$(LINK) $(LIBDIR) -o stream *.o $(LIBS)
+
+stream.o : stream.c
+	$(COMPILE) -D__EXEC $(INCLUDEDIR) stream.c
+
+binary.o : binary.c
+	$(COMPILE) $(INCLUDEDIR) binary.c
+
+misc.o : misc.c
+	$(COMPILE) $(INCLUDEDIR) misc.c
+
+clean:
+	rm -f *.o
+	rm -f *~
