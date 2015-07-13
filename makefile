@@ -49,6 +49,7 @@ install : $(LIBNAME)$(MAJOR)
 	cp $(LIBNAME)$(MAJOR) $(LIBDEST)/;  echo "Installed $(LIBNAME) files in $(LIBDEST)";
 	rm $(LIBDEST)/$(LIBNAME) || echo "No existing  $(LIBDEST)/$(LIBNAME)"
 	ln -s $(LIBNAME)$(MAJOR) $(LIBDEST)/$(LIBNAME); fi
+	echo $(LIBDEST) > /etc/ld.so.conf.d/libbinary.conf
 	/sbin/ldconfig
 
 clean:

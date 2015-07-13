@@ -17,7 +17,6 @@ Install dependencies, e.g. In Ubuntu 14.04
 Set the install location environment variable <tt>LIBBINARY</tt> and add to the library path, e.g.
 
     export LIBBINARY=/usr/local/libbinary
-    export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${BINARY}/lib
 
 to your <tt>.bashrc</tt>
 
